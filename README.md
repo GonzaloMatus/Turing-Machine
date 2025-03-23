@@ -75,7 +75,7 @@ turing_machine.run()
 After execution, check if the input word was accepted:
 
 ```python
-print(f"'{word}' is valid: {turing_machine.is_loaded_word_valid()}")
+turing_machine.print_word_validity()
 ```
 
 ## Example Output

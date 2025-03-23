@@ -30,6 +30,4 @@ word = "aaaaaa"
 turing_machine.load_word(list(word))
 turing_machine.debug_mode = False
 turing_machine.run()
-
-print(f"'{word}' is valid: {turing_machine.is_loaded_word_valid()}")
-
+turing_machine.print_word_validity()
