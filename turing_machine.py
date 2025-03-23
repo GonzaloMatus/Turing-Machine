@@ -81,8 +81,9 @@ class TuringMachine:
         state = q0
         pointer = 1
         while state!= qf:
-            if step_count > MAX_STEPS:
-                raise Exception("Exceeded maximum number of steps. Possible infinite loop.")
+            step_count += 1
+            if step_count == MAX_STEPS:
+                raise Exception(f"Exceeded maximum number of steps ({self.max_steps}). Possible infinite loop.")
             
             if self.debug_mode:
                 if input().lower() == "end":
@@ -106,7 +107,6 @@ class TuringMachine:
 
         self.validWord = True
         self.processed_word = self.tape
-        step_count += 1
 
     @staticmethod
     def print_configuration(state, list, index):
